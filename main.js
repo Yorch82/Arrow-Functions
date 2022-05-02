@@ -106,6 +106,7 @@ console.log(expNumbers)
 // Dado el siguiente array, generar un segundo array que consiga generar de salida el resultado esperado:
 
 const foodList = ["Pizza", "Ramen", "Paella", "Entrecot"];
+
 //Resultado esperado
 /* [
     'Como soy de Italia, amo comer Pizza',
@@ -114,10 +115,20 @@ const foodList = ["Pizza", "Ramen", "Paella", "Entrecot"];
     'Aunque no como carne, el Entrecot es sabroso'
    ]
 */
-
+const countryList = ["Italia", "Japón", "Valencia"]
 const comidaTexto = foodList.map ( (comida) => {
-
+    if (comida == "Pizza") {
+        return `Como soy de Italia, amo comer ${comida}`
+    } else if (comida == "Ramen"){
+        return `Como soy de Japón, amo comer ${comida}`
+    } else if (comida == "Paella") {
+        return `Como soy de Valencia, amo comer ${comida}`
+    } else {
+        return 'Aunque no como carne, el Entrecot es sabroso'
+    }
+   
 })
+console.log(comidaTexto)
 
 
 // 4. Filter
@@ -155,3 +166,16 @@ const foodLista = [
       'Que rica Tofu burguer me voy a comer!'
      ]
   */
+
+// const platosVeganos = foodLista.filter((vegaPlato) =>)
+
+
+// 5. Reduce
+
+// Dado el siguiente array, obtén la multiplicación de todos los elementos del array:
+
+const numeros = [39, 2, 4, 25, 62];
+// Salida--> 483600
+
+const sumNum = numeros.reduce((a, b) => a * b);
+console.log(sumNum)
