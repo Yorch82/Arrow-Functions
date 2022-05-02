@@ -167,8 +167,15 @@ const foodLista = [
      ]
   */
 
-// const platosVeganos = foodLista.filter((vegaPlato) =>)
+const platosVeganos = foodLista.filter(platoVegano => platoVegano.isVeggie == true)
 
+const niPutaIdeaDeComer = platosVeganos.map((plato) => {
+  if (plato.name === "Tempeh"){
+    return `Que rico ${plato.name} me voy a comer!`
+  }else if (plato.name === "Tofu burguer")
+    return `Que rica ${plato.name} me voy a comer!`  
+})
+console.log (niPutaIdeaDeComer)
 
 // 5. Reduce
 
